@@ -1,6 +1,6 @@
 version: "3.3"
-services:
 
+services:
   zcashd:
     build:
       context: zcashd/
