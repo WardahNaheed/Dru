@@ -35,7 +35,7 @@ RUN rm /etc/nginx/sites-enabled/default
 RUN chown -R www-data /srv
 RUN chown -R www-data /etc/nginx
 
-WORKDIR F:\zcashanalysis\Dru\web\src
+WORKDIR /app
 
 COPY src/wait-for-it.sh .
 RUN chmod +rx wait-for-it.sh
