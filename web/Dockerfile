@@ -36,6 +36,9 @@ RUN chown -R www-data /srv
 RUN chown -R www-data /etc/nginx
 
 WORKDIR /com.docker.devenvironments.code/web/src
+
+RUN mkdir /app
+COPY . /app                                       
 WORKDIR /app
 
 COPY src/wait-for-it.sh .
