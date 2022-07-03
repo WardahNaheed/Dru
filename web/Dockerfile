@@ -41,7 +41,8 @@ COPY src/wait-for-it.sh .
 RUN chmod +rx wait-for-it.sh
 COPY src/start.sh .
 RUN chmod +rx start.sh
-ADD src/manage.py .
+COPY src/manage.py .
+RUN chmod +rx manage.py
 
 # Server
 EXPOSE 80
