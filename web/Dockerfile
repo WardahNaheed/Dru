@@ -37,9 +37,9 @@ RUN chown -R www-data /etc/nginx
 
 WORKDIR /app
 
-COPY ./wait-for-it.sh .
+COPY wait-for-it.sh .
 RUN chmod +rx wait-for-it.sh
-COPY ./start.sh .
+COPY start.sh .
 RUN chmod +rx start.sh
 
 # Server
