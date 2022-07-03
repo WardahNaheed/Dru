@@ -35,11 +35,11 @@ RUN rm /etc/nginx/sites-enabled/default
 RUN chown -R www-data /srv
 RUN chown -R www-data /etc/nginx
 
-WORKDIR /com.docker.devenvironments.code/web/src
-
 RUN mkdir /app
 COPY . /app                                       
 WORKDIR /app
+
+WORKDIR /com.docker.devenvironments.code/web/src
 
 COPY src/wait-for-it.sh .
 RUN chmod +rx wait-for-it.sh
