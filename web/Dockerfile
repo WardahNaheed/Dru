@@ -35,7 +35,7 @@ RUN rm /etc/nginx/sites-enabled/default
 RUN chown -R www-data /srv
 RUN chown -R www-data /etc/nginx
 
-WORKDIR /app
+WORKDIR /com.docker.devenvironments.code/web/src
 
 COPY src/wait-for-it.sh .
 RUN chmod +rx wait-for-it.sh
@@ -45,4 +45,4 @@ RUN chmod +rx start.sh
 # Server
 EXPOSE 80
 STOPSIGNAL SIGINT
-CMD ["bash", "F:/zcashanalysis/Dru/web/src/wait-for-it.sh", "postgres:5432", "-s", "-t", "120", "--", "F:/zcashanalysis/Dru/web/src/start.sh"]
+CMD ["bash", "/com.docker.devenvironments.code/web/src/wait-for-it.sh", "postgres:5432", "-s", "-t", "120", "--", "/com.docker.devenvironments.code/web/src/start.sh"]
