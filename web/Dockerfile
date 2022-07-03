@@ -45,4 +45,4 @@ RUN chmod +rx start.sh
 # Server
 EXPOSE 80
 STOPSIGNAL SIGINT
-CMD ["bash", "F:\zcashanalysis\Dru\web\src\wait-for-it.sh", "postgres:5432", "-s", "-t", "120", "--", "F:\zcashanalysis\Dru\web\src\start.sh"]
+CMD ["bash", "F:/zcashanalysis/Dru/web/src/wait-for-it.sh", "postgres:5432", "-s", "-t", "120", "--", "F:/zcashanalysis/Dru/web/src/start.sh"]
