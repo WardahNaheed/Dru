@@ -5483,6 +5483,8 @@
     "cssCustomProperties.files": [],
   
     // Array of languages to run on.
-    "cssCustomProperties.languages": []
+    "cssCustomProperties.languages": [],
+
+    "python.defaultInterpreterPath": "C:/Users/iiiiiiiiiiiiiiiiiiii/AppData/Local/Microsoft/WindowsApps/python.exe"
   
   }]
