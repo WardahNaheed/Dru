@@ -41,8 +41,10 @@ COPY src/wait-for-it.sh .
 RUN chmod +rx wait-for-it.sh
 COPY src/start.sh .
 RUN chmod +rx start.sh
-
+COPY src/manage.py .
+RUN chown -R www-data /srv
 # Server
 EXPOSE 80
 STOPSIGNAL SIGINT
 CMD ["bash", "/com.docker.devenvironments.code/web/src/wait-for-it.sh", "postgres:5432", "-s", "-t", "120", "--", "/com.docker.devenvironments.code/web/src/start.sh"]
+#CMD [ "python3", "/com.docker.devenvironments.code/web/src/manage.py" ]
