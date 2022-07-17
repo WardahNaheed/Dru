@@ -24,7 +24,7 @@ manage-conf:
 build:
 	docker-compose build
 
-stop:
+stop :
 	docker-compose down -v
 
 run:

@@ -29,10 +29,10 @@ else:
 vars['web_port'] = '8000' if vars['debug'] == 'true' else '80'
 
 if 'web_ssl_key_path' not in vars:
-    vars['web_ssl_key_path'] = './web/conf/placeholder.key'
+    vars['web_ssl_key_path'] = 'F:/zcashanalysis/Dru/web/conf/placeholder.key'
 
 if 'web_ssl_cert_path' not in vars:
-    vars['web_ssl_cert_path'] = './web/conf/placeholder.cert'
+    vars['web_ssl_cert_path'] = 'F:/zcashanalysis/Dru/web/conf/placeholder.cert'
 
 with open(".env", "w") as env_file:
     env_file.write("".join(["{}={}\n".format(k, v) for k, v in vars.items()]))
